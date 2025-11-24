@@ -110,4 +110,11 @@ async function edit (_id, change) {
 async function destroy (_id) {
   return await Product.deleteOne({_id})
 }
-
+module.exports = {
+  list,
+  get,
+  create,
+  edit,
+  destroy,
+};
+}
