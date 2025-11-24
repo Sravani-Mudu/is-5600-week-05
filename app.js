@@ -2,8 +2,12 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const api = require('./api')
 const middleware = require('./middleware')
+const path = require('path')
 
 const app = express()
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'))
+})
 
 // Middleware
 app.use(bodyParser.json())
